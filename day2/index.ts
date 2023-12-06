@@ -1,6 +1,7 @@
 import fs from "fs";
+import path from "path";
 
-const input = fs.readFileSync("./day2.input.txt", {
+const input = fs.readFileSync(process.cwd() + "/day2/day2.input.txt", {
   encoding: "utf8",
   flag: "r",
 });
