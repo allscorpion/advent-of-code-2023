@@ -47,6 +47,7 @@ inputList.forEach((row) => {
   const firstNumber = convertStringToNumber(numbers[0] ?? "");
   const lastNumber = convertStringToNumber(numbers[numbers.length - 1] ?? "");
   const currentAnswer = parseInt(`${firstNumber}${lastNumber}`, 10);
+
   total += currentAnswer;
 });
 
