@@ -24,7 +24,7 @@ const convertStringToNumber = (str: string): string => {
   return str;
 };
 
-const findMatch = (match) => {
+const findMatch = (match: RegExpMatchArray) => {
   for (const item of match) {
     if (item) {
       return item;
@@ -44,8 +44,8 @@ inputList.forEach((row) => {
   if (!numbers) {
     return;
   }
-  const firstNumber = convertStringToNumber(numbers[0]);
-  const lastNumber = convertStringToNumber(numbers[numbers.length - 1]);
+  const firstNumber = convertStringToNumber(numbers[0] ?? "");
+  const lastNumber = convertStringToNumber(numbers[numbers.length - 1] ?? "");
   const currentAnswer = parseInt(`${firstNumber}${lastNumber}`, 10);
   total += currentAnswer;
 });
